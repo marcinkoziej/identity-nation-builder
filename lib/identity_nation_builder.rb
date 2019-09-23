@@ -6,7 +6,7 @@ module IdentityNationBuilder
   PUSH_BATCH_AMOUNT = 100
   SYNCING = 'members'
   CONTACT_TYPE = {'rsvp' => 'event', 'tag' => 'list', 'mark_as_attended_to_all_events_on_date' => ' mark as attended'}
-  PULL_JOBS = [[:fetch_new_events, 1.hours], [:fetch_recruiters, 1.hours]]
+  PULL_JOBS = []
   MEMBER_RECORD_DATA_TYPE='object'
 
   def self.push(sync_id, members, external_system_params)
