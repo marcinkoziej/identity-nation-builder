@@ -20,5 +20,6 @@ Gem::Specification.new do |s|
   s.add_dependency "pg", "~> 0.18"
   s.add_dependency "active_model_serializers", "~> 0.10.7"
   s.add_dependency "nationbuilder-rb"
+  s.add_dependency "sidekiq", "~> 5.2.7"
 
 end

@@ -235,4 +235,10 @@ module IdentityNationBuilder
     event_location +="#{venue_address['country_code']}" unless venue_address['country_code'].blank?
     event_location
   end
+
+  def self.sync_unsubscribes!
+    # not sure why this is not loaded
+    require_relative '../app/models/identity_nation_builder/sync_unsubscribes.rb'
+    MemberSubscription.include IdentityNationBuilder::SyncUnsubscribes
+  end
 end
