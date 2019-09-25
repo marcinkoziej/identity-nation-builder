@@ -14,7 +14,7 @@ module IdentityNationBuilder
       if unsubscribed
         if unsubscribed[0] == nil && unsubscribed[1] != nil &&
            self.unsubscribe_mailing_id != nil
-          UnsubscribeFromNationBuilderWorker.perform_async(self.member_id)
+          UnsubscribeFromNationBuilderWorker.perform_async(self.member_id, Subscription::EMAIL_SUBSCRIPTION.id)
         end
       end
     end
